@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Articles list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Image</th>
+                <th>Extrait</th>
+                <th>Contenu</th>
+                <th>Createdby</th>
+                <th>Createdat</th>
+                <th>Updatedat</th>
+                <th>Isenable</th>
+                <th>Publishat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+            <tr>
+                <td><a href="{{ path('article_show', { 'id': article.id }) }}">{{ article.id }}</a></td>
+                <td>{{ article.titre }}</td>
+                <td>{{ article.image }}</td>
+                <td>{{ article.extrait }}</td>
+                <td>{{ article.contenu }}</td>
+                <td>{{ article.createdBy }}</td>
+                <td>{% if article.createdAt %}{{ article.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if article.updatedAt %}{{ article.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if article.isEnable %}Yes{% else %}No{% endif %}</td>
+                <td>{% if article.publishAt %}{{ article.publishAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('article_show', { 'id': article.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('article_edit', { 'id': article.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('article_new') }}">Create a new article</a>
+        </li>
+    </ul>
+{% endblock %}

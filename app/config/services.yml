@@ -1,0 +1,11 @@
+# Learn more about services, parameters and containers at
+# https://symfony.com/doc/current/service_container.html
+parameters:
+    #parameter_name: value
+    app.path.site_logo: /uploads/images/logo
+    app.path.article_images: /uploads/images/articles
+services:
+  redirect.after.login:
+    class: ES\MainBundle\Redirection\AfterLoginRedirection
+    arguments: ['@router']
+

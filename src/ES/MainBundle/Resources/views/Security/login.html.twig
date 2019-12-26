@@ -1,0 +1,110 @@
+<html dir="ltr" lang="en-US"><head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="SemiColonWeb">
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css">
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ absolute_url(asset('bundles/esmain/css/bootstrap.css')) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('bundles/esmain/style.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('bundles/esmain/css/font-icons.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('bundles/esmain/css/animate.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('bundles/esmain/css/magnific-popup.css') }}" type="text/css">
+
+    <link rel="stylesheet" href="{{ asset('bundles/esmain/css/responsive.css') }}" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Document Title
+    ============================================= -->
+    <title>Login - Layout 4 | Canvas</title>
+
+    <style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+
+<body class="stretched device-lg">
+
+<!-- Document Wrapper
+============================================= -->
+<div id="wrapper" class="clearfix" style="animation-duration: 1.5s; opacity: 1;">
+
+    <!-- Content
+    ============================================= -->
+    <section id="content" style="margin-bottom: 0px;">
+
+        <div class="content-wrap nopadding">
+
+            <div class="section nopadding nomargin" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: #444;"></div>
+
+            <div class="section nobg full-screen nopadding nomargin" style="height: 428px;">
+                <div class="container vertical-middle divcenter clearfix" style="position: absolute; top: 50%; width: 100%; padding-top: 0px; padding-bottom: 0px; margin-top: -330px;">
+
+                    <div class="row center">
+                        <a href="{{ path('es_main_homepage') }}"><img src="{{ asset('bundles/esmain/images/logo.png') }}" alt="Canvas Logo"></a>
+                    </div> <br/>
+
+                    <div class="panel panel-default divcenter noradius noborder" style="max-width: 400px;">
+                        <div class="panel-body" style="padding: 40px;">
+                            <form id="login-form" name="login-form" class="nobottommargin" action="{{ path("fos_user_security_check") }}" method="post">
+                                <h3>Login to your Account</h3>
+                                {% if error %}
+                                    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                                {% endif %}
+
+
+                                <div class="col_full">
+                                    <label for="login-form-username">Username /Email:</label>
+                                    <input type="text" id="login-form-username" name="_username" value="{{ last_username }}" class="form-control not-dark">
+                                </div>
+
+                                <div class="col_full">
+                                    <label for="login-form-password">Password:</label>
+                                    <input type="password" id="login-form-password" name="_password" value="" class="form-control not-dark">
+                                </div>
+
+                                <div class="col_full nobottommargin">
+                                    <button type="submit" class="button button-3d button-black nomargin" id="login-form-submit" name="login-form-submit" value="login">{{ 'security.login.submit'|trans }}</button>
+                                    <a href="#" class="fright">Forgot Password?</a>
+                                </div>
+                            </form>
+
+                            <div class="line line-sm"></div>
+
+                            <div class="center">
+                                <h4 style="margin-bottom: 15px;">or Login with:</h4>
+                                <a href="#" class="button button-rounded si-facebook si-colored">Facebook</a>
+                                <span class="hidden-xs">or</span>
+                                <a href="#" class="button button-rounded si-twitter si-colored">Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row center dark"><small>Copyrights © All Rights Reserved by Canvas Inc.</small></div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section><!-- #content end -->
+
+</div><!-- #wrapper end -->
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+<!-- External JavaScripts
+============================================= -->
+<script type="text/javascript" src="{{ asset('bundles/esmain/js/jquery.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/esmain/js/plugins.js') }}"></script>
+
+<!-- Footer Scripts
+============================================= -->
+<script type="text/javascript" src="{{ asset('bundles/esmain/js/functions.js') }}"></script>
+
+
+</body>
+</html>

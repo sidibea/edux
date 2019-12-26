@@ -1,0 +1,3 @@
+site_info_display:
+    path:     /site-info
+    defaults: { _controller: ESMainBundle:Ajax:siteInfo }

@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Reglage</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ reglage.id }}</td>
+            </tr>
+            <tr>
+                <th>Sitetitle</th>
+                <td>{{ reglage.siteTitle }}</td>
+            </tr>
+            <tr>
+                <th>Slogan</th>
+                <td>{{ reglage.slogan }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ reglage.email }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ reglage.phone }}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{% if reglage.createdAt %}{{ reglage.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if reglage.updatedAt %}{{ reglage.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('reglage_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('reglage_edit', { 'id': reglage.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

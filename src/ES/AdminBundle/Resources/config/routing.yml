@@ -1,0 +1,15 @@
+es_admin_homepage:
+    path:     /
+    defaults: { _controller: ESAdminBundle:Default:index }
+
+is_admin_reglage:
+    resource: "@ESAdminBundle/Resources/config/routing/reglage.yml"
+    prefix:   /reglage
+
+is_admin_category:
+    resource: "@ESAdminBundle/Resources/config/routing/category.yml"
+    prefix:   /categories
+
+is_admin_articles:
+    resource: "@ESAdminBundle/Resources/config/routing/article.yml"
+    prefix:   /articles

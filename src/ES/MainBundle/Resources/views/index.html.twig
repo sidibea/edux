@@ -1,0 +1,276 @@
+{% extends "ESMainBundle::layout.html.twig" %}
+
+{% block slider %}
+    <section id="slider" class="slider-parallax swiper_wrapper clearfix" style="height: 550px;" data-loop="true">
+
+        <div class="swiper-container swiper-parent">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url({{ asset('bundles/esmain/images/slider/2.jpg') }}); background-position: center top;">
+                    <div class="container clearfix">
+                        <div class="slider-caption ">
+                            <h2>{{ 'slider.title1'|trans }}</h2>
+                            <p>{{ 'slider.caption1'|trans }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="container clearfix">
+                        <div class="slider-caption slider-caption-right">
+                            <h2>Beautifully Flexible</h2>
+                            <p>Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
+                        </div>
+                    </div>
+                    <div class="video-wrap">
+                        <video id="slide-video" poster="{{ asset('bundles/emain/demos/construction/images/videos/1.jpg') }}" preload="auto" loop autoplay muted>
+                            <source src="{{ asset('bundles/emain/demos/construction/images/videos/1.webm') }}" type='video/webm' />
+                            <source src="{{ asset('bundles/emain/demos/construction/images/videos/1.mp4') }}" type='video/mp4' />
+                        </video>
+                        <div class="video-overlay" style="background-color: rgba(0,0,0,0.1);"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url('demos/construction/images/slider/1.jpg'); background-position: center bottom;">
+                    <div class="container clearfix">
+                        <div  class="slider-caption">
+                            <h2>Premium Constructions</h2>
+                            <p>You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
+            <div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
+        </div>
+
+    </section>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="content-wrap">
+        <div class="promo promo-light promo-full bottommargin-lg header-stick notopborder">
+            <div class="container clearfix">
+                <h3>{{ 'front.call_to_action.create_account.title'|trans |raw }}</h3>
+                <span>{{ 'front.call_to_action.create_account.description'|trans | raw }}</span>
+                <a href="#" class="button button-dark button-xlarge button-rounded">{{ 'front.call_to_action.create_account.button'|trans }}</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row clearfix">
+
+                <div class="col-lg-7">
+                    <div class="heading-block topmargin">
+                        <h1>{{ 'front.welcome'|trans }}</h1>
+                    </div>
+                    <p class="lead">
+                        {{ 'front.content.description' | trans }}
+                    </p>
+                </div>
+
+                <div class="col-lg-5">
+
+                    <div style="position: relative; margin-bottom: -60px; height: 426px;" class="ohidden" data-height-lg="426" data-height-md="567" data-height-sm="470" data-height-xs="287" data-height-xxs="183">
+                        <img src="{{ asset('bundles/esmain/images/2.png') }}" style="position: absolute; height: 426px; top: 0; left: 0;" data-animate="fadeInUp" data-delay="100" alt="Chrome" class="fadeInUp animated">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="section nobottommargin">
+            <div class="container clear-bottommargin clearfix">
+
+                <div class="row topmargin-sm clearfix">
+
+                    <div class="col-md-4 bottommargin">
+                        <img src="{{ asset('bundles/esmain/images/mentor.png') }}" style="margin-bottom: 15px;" />
+                        <div class="heading-block nobottomborder" style="margin-bottom: 15px;">
+                            <h4>Get paired with a personal mentor</h4>
+                        </div>
+                        <p>Edu-X offers students a roadmap so that they know what to do, when. For 9th–11th graders, we help them make smart choices early on to develop their profile. For seniors, we help them complete the admissions process successfully — while keeping the entire family stress-free. </p>
+                    </div>
+
+                    <div class="col-md-4 bottommargin">
+                        <img src="{{ asset('bundles/esmain/images/investment.png') }}" style="margin-bottom: 15px;" />
+                        <div class="heading-block nobottomborder" style="margin-bottom: 15px;">
+                            <h4>Understand
+                                your college investment</h4>
+                        </div>
+                        <p>Discover which colleges are likely to be good financial investments and which should be avoided based on your unique academic and financial situation. Then, work with our consultants to maximize the scholarship package your family needs. </p>
+                    </div>
+
+                    <div class="col-md-4 bottommargin">
+                        <i class="i-plain color i-large icon-line2-equalizer inline-block" style="margin-bottom: 15px;"></i>
+                        <div class="heading-block nobottomborder" style="margin-bottom: 15px;">
+                            <h4>Work 1:1 with
+                                an expert consultant.</h4>
+                        </div>
+                        <p>Each year, college admissions are becoming more competitive. It is important to work with a team that understands what colleges are actually looking for. Our consultants will help you assess your admissions chances and improve your applications substantially. </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section dark parallax notopmargin nobottommargin noborder" style="height: 500px; padding: 145px 0;">
+
+            <div class="container clearfix">
+
+                <div class="slider-caption slider-caption-center" style="position: relative;">
+                    <div data-animate="fadeInUp" class="fadeInUp animated">
+                        <h2 style="font-size: 42px;">Beautiful HTML5 Videos</h2>
+                        <p>Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
+                        <a href="#" class="button button-border button-rounded button-white button-light button-large noleftmargin nobottommargin" style="margin-top: 20px;">Show More</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="video-wrap">
+                <video poster="{{ asset('bundles/esmain/images/videos/explore.jpg') }}" preload="none" loop="" autoplay="" muted="" style="width: 1349px; height: 759px; top: -129.5px;">
+                    <source src="{{ asset('bundles/esmain/images/videos/explore.mp4') }}" type="video/mp4">
+                    <source src="{{ asset('bundles/esmain/images/videos/explore.webm') }}" type="video/webm">
+                </video>
+                <div class="video-overlay" style="background-color: rgba(0,0,0,0.3);"></div>
+            </div>
+
+        </div>
+        <div class="col_full bottommargin-lg common-height">
+
+            <div class="col-md-4 dark col-padding ohidden" style="background-color: rgb(26, 188, 156); height: 356px;">
+                <div>
+                    <h3 class="uppercase" style="font-weight: 600;">Why choose Us</h3>
+                    <p style="line-height: 1.8;">Transform, agency working families thinkers who make change happen communities. Developing nations legal aid public sector our ambitions future aid The Elders economic security Rosa.</p>
+                    <a href="#" class="button button-border button-light button-rounded uppercase nomargin">Read More</a>
+                    <i class="icon-bulb bgicon"></i>
+                </div>
+            </div>
+
+            <div class="col-md-4 dark col-padding ohidden" style="background-color: rgb(52, 73, 94); height: 356px;">
+                <div>
+                    <h3 class="uppercase" style="font-weight: 600;">Our Mission</h3>
+                    <p style="line-height: 1.8;">Frontline respond, visionary collaborative cities advancement overcome injustice, UNHCR public-private partnerships cause. Giving, country educate rights-based approach; leverage disrupt solution.</p>
+                    <a href="#" class="button button-border button-light button-rounded uppercase nomargin">Read More</a>
+                    <i class="icon-cog bgicon"></i>
+                </div>
+            </div>
+
+            <div class="col-md-4 dark col-padding ohidden" style="background-color: rgb(231, 76, 60); height: 356px;">
+                <div>
+                    <h3 class="uppercase" style="font-weight: 600;">What you get</h3>
+                    <p style="line-height: 1.8;">Sustainability involvement fundraising campaign connect carbon rights, collaborative cities convener truth. Synthesize change lives treatment fluctuation participatory monitoring underprivileged equal.</p>
+                    <a href="#" class="button button-border button-light button-rounded uppercase nomargin">Read More</a>
+                    <i class="icon-thumbs-up bgicon"></i>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+
+        <div id="oc-clients" class="section nobgcolor notopmargin owl-carousel owl-carousel-full image-carousel footer-stick carousel-widget owl-loaded owl-drag" data-margin="80" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xxs="2" data-items-xs="3" data-items-sm="4" data-items-md="5" data-items-lg="6">
+
+            <div class="owl-stage-outer">
+                <div class="owl-stage" style="transform: translate3d(-2619.84px, 0px, 0px); transition: all 0.25s ease 0s; width: 5240px;">
+                    <div class="owl-item cloned" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item">
+                            <a href="#">
+                                <img src="{{ asset('bundles/esmain/images/clients/5.png') }}" alt="Clients"></a>
+                        </div>
+                    </div>
+                    <div class="owl-item cloned" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/6.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item cloned" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/7.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item cloned" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/8.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item cloned" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/9.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item cloned" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/10.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/1.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/2.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/3.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/4.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/5.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item active" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/6.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item active" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/7.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item active" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/8.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item active" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/9.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item active" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/10.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item cloned active" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/1.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item cloned" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/2.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item cloned" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/3.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item cloned" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/4.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item cloned" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/5.png') }}" alt="Clients"></a></div>
+                    </div>
+                    <div class="owl-item cloned" style="width: 158.167px; margin-right: 80px;">
+                        <div class="oc-item"><a href="#"><img src="{{ asset('bundles/esmain/images/clients/6.png') }}" alt="Clients"></a></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="owl-nav disabled">
+                <div class="owl-prev"><i class="icon-angle-left"></i></div>
+                <div class="owl-next"><i class="icon-angle-right"></i></div>
+            </div>
+            <div class="owl-dots disabled"></div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        function loadHeader()
+        {
+            var url= {{ path('site_info_display') }};
+            var result = post_ajax(url,data);
+
+            console.log(result);
+        }
+
+        $(document).ready(function(){
+            console.log('this is run on page load');
+            loadHeader();
+        });
+
+    </script>
+{% endblock %}

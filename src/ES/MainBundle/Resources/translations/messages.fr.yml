@@ -1,0 +1,49 @@
+# Dans un catalogue
+
+front:
+    welcome: Welcome to Edu-X Services
+    header:
+        call_us:  Appellez-nous
+        email_us: Envoyez-nous un email
+        open: Horaire d'ouverture
+    menu:
+        home:   Accueil
+        about_us: Qui sommes nous ?
+        about_edux: A propos de Edu-X Services
+        how_it_works: Comment ça marche
+        meet_the_team: Notre Equipe
+        case_study: Etude de cas
+        our_services: Nos Services
+        us_resident: Résidant US
+        monitoring: Programme de monitoring
+        international_students: Etudiants internationnaux
+        assistance_french: Assistance en Français
+        articles: Articles
+        scholarship: Bourses
+        write_a_review: Ecrire un avis
+        contact_us: Contactez-nous
+    call_to_action:
+        create_account:
+            title: Créez un compte <span>Edu-X</span> maintenant
+            description: Rejoignez plus de 3000 autres familles d'écoles secondaires qui ont travaillé avec Edu-X <br> pour réussir leurs admissions dans les écoles secondaires et les collèges.
+            button: Inscription gratuite
+    content:
+        description: Chez Edu-X, nous encourageons les étudiants à étudier à l’étranger et à devenir des citoyens du monde influents en acquérant les connaissances et les compétences dont ils ont besoin pour réussir dans le contexte de la mondialisation. Nos étudiants intègrent les meilleurs collèges du Canada et des États-Unis. Nous les aidons à entrer dans des collèges très sélectifs, à obtenir leur permis d’études et à trouver le logement le plus économique. Les étudiants devraient également profiter de notre programme de mentorat pour développer leur plus haut potentiel et exceller à l'université.
+    account:
+        login: connexion
+        logout: Deconnexion
+        username: Nom d'utilisateur
+        password: Mot de passe
+    about:
+        pagetitle: A Propos d'Edu-X Services
+        description: Edu-X Services is the world's leading college consultant committed to counseling students from around the world so that they can gain admission to highly competitive universities.
+
+slider:
+    caption1: 98% de nos étudiants sont admis dans les trois meilleures écoles. Le processus d'admission est stressant, il est donc important de pouvoir compter sur quelqu'un. Lorsque vous travaillerez avec Edu-X, vous serez jumelé à votre propre consultant, qui sera un excellent partenaire de conseil.
+    title1: Bienvenue sur Edu-X Services
+
+account:
+    login: connexion
+    logout: Deconnexion
+    username: Nom d'utilisateur
+    password: Mot de passe

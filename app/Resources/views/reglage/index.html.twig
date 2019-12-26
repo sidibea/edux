@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Reglages list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Sitetitle</th>
+                <th>Slogan</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Createdat</th>
+                <th>Updatedat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reglage in reglages %}
+            <tr>
+                <td><a href="{{ path('reglage_show', { 'id': reglage.id }) }}">{{ reglage.id }}</a></td>
+                <td>{{ reglage.siteTitle }}</td>
+                <td>{{ reglage.slogan }}</td>
+                <td>{{ reglage.email }}</td>
+                <td>{{ reglage.phone }}</td>
+                <td>{% if reglage.createdAt %}{{ reglage.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if reglage.updatedAt %}{{ reglage.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('reglage_show', { 'id': reglage.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('reglage_edit', { 'id': reglage.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('reglage_new') }}">Create a new reglage</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,48 @@
+{# If method is not GET the langue switcher is hidden to prevent change the url on a post action #}
+
+    {% set actualLangue = app.request.locale %}
+
+    {% set routeParams = app.request.get('_route_params') %}
+
+
+    <div class="langues">
+        <!-- Top Links
+              ============================================= -->
+        <div class="top-links">
+
+            <ul>
+                <li>
+            {% for langue in ['fr','en'] %}
+
+                {% if actualLangue == langue %}
+                    <a href="#">{{ langue|capitalize }}</a>
+
+                    {% else %}
+                        {% if routeParams['_locale'] is defined %}
+                            {% set routeParams = routeParams|merge({'_locale': langue}) %}
+                        {% endif %}
+
+                    <ul>
+                        <li><a href="{{ path(app.request.get('_route'), routeParams) }}">{{ langue|capitalize }}</a></li>
+                    </ul>
+                {% endif %}
+
+            {% endfor %}
+                </li>
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                    <li>
+                        <a href="{{ path('fos_user_security_logout') }}">
+                            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                        </a>
+                    </li>
+                {% else %}
+                    <li><a href="{{ path('login') }}">Connexion</a></li>
+                    <li><a href="">Inscription</a></li>
+
+                {% endif %}
+
+            </ul>
+        </div><!-- .top-links end -->
+
+    </div>

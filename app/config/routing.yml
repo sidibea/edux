@@ -1,0 +1,40 @@
+es_country:
+    resource: "@ESCountryBundle/Resources/config/routing.yml"
+    prefix:   /{_locale}/country
+    requirements:
+      _locale: en|fr # les locales disponibles, séparées par des pipes « | »
+es_parent:
+    resource: "@ESParentBundle/Resources/config/routing.yml"
+    prefix:   /{_locale}/parent
+    requirements:
+      _locale: en|fr # les locales disponibles, séparées par des pipes « | »
+
+es_student:
+    resource: "@ESStudentBundle/Resources/config/routing.yml"
+    prefix:   /{_locale}/student
+    requirements:
+      _locale: en|fr # les locales disponibles, séparées par des pipes « | »
+
+es_admin:
+    resource: "@ESAdminBundle/Resources/config/routing.yml"
+    prefix:   /{_locale}/admin
+    requirements:
+      _locale: en|fr # les locales disponibles, séparées par des pipes « | »
+
+es_main:
+    resource: "@ESMainBundle/Resources/config/routing.yml"
+    prefix:   /{_locale}/
+    requirements:
+      _locale: en|fr # les locales disponibles, séparées par des pipes « | »
+login:
+    path:   /login
+    defaults:  { _controller: ESMainBundle:Security:login }
+
+login_check:
+    path:   /login_check
+
+logout:
+    path:   /logout
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"

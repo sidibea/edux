@@ -1,0 +1,10 @@
+category_index:
+    path:     /
+    defaults: { _controller: "ESAdminBundle:Category:index" }
+category_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ESAdminBundle:Category:edit" }
+    methods:  [GET, POST]
+category_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ESAdminBundle:Category:delete" }

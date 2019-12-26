@@ -1,0 +1,42 @@
+# Dans un catalogue
+
+front:
+    welcome: Welcome to Edu-X Services
+    header:
+        call_us:  Call Us
+        email_us: Email Us
+        open: Open Hours
+    menu:
+        home:   Home
+        about_us: Who we are ?
+        about_edux: About Edu-X Services
+        how_it_works: How it works
+        meet_the_team: Our team
+        case_study: Case study
+        our_services: Our Services
+        us_resident: US Resident
+        monitoring: Monitoring programs
+        international_students: International students
+        assistance_french: Assistance in french
+        articles: Articles
+        scholarship: Scholarship
+        write_a_review: Write a review
+        contact_us: Contact Us
+    call_to_action:
+        create_account:
+            title: Create an Edu-X account now
+            description: Join 3000+ other high school families who have worked with Edu-X to succeed in high school and college admissions.
+            button: Sign up for free
+    content:
+        description: At Edu-X, we encourage students to study abroad and become influential global citizens by gaining the knowledge and skills they need to succeed in this globalizing world. Our students integrate the best colleges in Canada and in the U.S. We help them to gain admission in highly selective colleges, get their study permit, and find the best-value housing. Students should also take advantage of our mentoring program to develop their highest potential and excel in college.
+    about:
+        pagetitle: A Propos d'Edu-X Services
+        description: Edu-X Services is the world's leading college consultant committed to counseling students from around the world so that they can gain admission to highly competitive universities.
+
+
+
+
+slider:
+    caption1: 98% of our students get admitted to all their top 3 schools. The admissions process is stressful, so it's important to have someone to rely on. When you work with Edu-X, you’ll be paired with your very own consultant who will be a great advising match.
+    title1: Welcome to Edu-X Services
+

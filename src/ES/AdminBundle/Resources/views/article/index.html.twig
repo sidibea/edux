@@ -1,0 +1,59 @@
+{% extends 'ESAdminBundle::layout.html.twig' %}
+
+{% block title %} Articles {% endblock %}
+{% block pagetitle %}
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Articles</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="{{ path('es_admin_homepage') }}">Tableau de bord</a></li>
+                    <li class="breadcrumb-item active">Articles</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-tools">
+                    <a href="{{ path('article_new') }}" class="btn btn-block btn-default">Nouveau</a>
+                </div>
+
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td style="width: 10px">#</td>
+                        <td>Titre</td>
+                        <td>Auteur</td>
+                        <td>Catégories</td>
+                        <td>Date</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for a in articles %}
+                        <tr>
+                            <td>{{ c.id }}</td>
+                            <td>{{ c.title }}</td>
+                            <td>{{ c.createdBy.username }}</td>
+                            <td>{{ c.category.nomFr }}</td>
+                            <td>{{ c.createdAt | date('d-m-Y') }}</td>
+                        </tr>
+
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

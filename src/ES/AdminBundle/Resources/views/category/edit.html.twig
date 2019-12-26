@@ -1,0 +1,119 @@
+{% extends 'ESAdminBundle::layout.html.twig' %}
+
+{% block title %} Catégories {% endblock %}
+{% block pagetitle %}
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Catégories d'articles </h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="{{ path('es_admin_homepage') }}">Tableau de bord</a></li>
+                    <li class="breadcrumb-item"><a href="{{ path('es_admin_homepage') }}">Articles</a></li>
+                    <li class="breadcrumb-item active">Catégories</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Ajouter une Nouvelle catégorie</h3>
+                </div>
+                {{ form_start(form, {'attr': { 'role' : 'form' }}) }}
+
+                {# Les erreurs générales du formulaire. #}
+                {{ form_errors(form) }}
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nom (Français)</label>
+                        {{ form_widget(form.nomFr, {'attr': {'class': 'form-control' }}) }}
+                        <p><i>Ce nom est utilisé un peu partout sur votre site.</i></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nom (Anglais)</label>
+                        {{ form_widget(form.nomEn, {'attr': {'class': 'form-control' }}) }}
+                        <p><i>Ce nom est utilisé un peu partout sur votre site.</i></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Slug</label>
+                        {{ form_widget(form.slug, {'attr': {'class': 'form-control' }}) }}
+                        <p><i>Le slug est la version normalisée du nom. Il ne contient généralement que des lettres minuscules non accentuées, des chiffres et des traits d’union.</i></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Description</label>
+                        {{ form_widget(form.description, {'attr': {'class': 'form-control' }}) }}
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Active</label>
+                        {{ form_widget(form.isActive, {'attr': {'class': '' }}) }}
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+
+                </div>
+                {{ form_rest(form) }}
+
+                {# Fermeture de la balise <form> du formulaire HTML #}
+                {{ form_end(form) }}
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td style="width: 10px">#</td>
+                                <td>Nom</td>
+                                <td>Slug</td>
+                                <td>Description</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if categories == null %}
+                                <tr>
+                                    <td class="text-center" colspan="4">
+                                        <h4>Ooooooops! <br>Aucune donnée enregistrée</h4></td>
+                                </tr>
+                            {% else %}
+                                {% for c in categories  %}
+                                    <tr>
+                                        <td>{{ c.id }}</td>
+                                        <td>
+                                            <b>
+                                                {% if c.isActive == true %}
+                                                    <span class="green">{{ c.nomFr }}</span>
+                                                {% else %}
+                                                    <span class="text-red">{{ c.nomFr }}</span>
+
+                                                {% endif %}
+                                            </b>
+                                            <div class="row-actions">
+                                                <span class="edit"><a href="{{ path('category_edit',{ 'id': c.id }) }}" aria-label="Modifier «&nbsp;Development&nbsp;»">Modifier</a> | </span>
+                                                <span class="delete"><a href="{{ path('category_delete',{ 'id': c.id }) }}" class="delete-tag aria-button-if-js" aria-label="Supprimer «&nbsp;Development&nbsp;»" role="button">Supprimer</a> </span>
+                                            </div>
+                                        </td>
+                                        <td>{{ c.slug }}</td>
+                                        <td>{{ c.description }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}

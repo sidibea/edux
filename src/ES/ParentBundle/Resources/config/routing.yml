@@ -1,0 +1,3 @@
+es_parent_homepage:
+    path:     /
+    defaults: { _controller: ESParentBundle:Default:index }

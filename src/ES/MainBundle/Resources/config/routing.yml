@@ -1,0 +1,13 @@
+es_main_homepage:
+    path:     /
+    defaults: { _controller: ESMainBundle:Main:index }
+es_main_about:
+    path:     /about-edu-xservices
+    defaults: { _controller: ESMainBundle:Main:about }
+es_main_contact_us:
+    path:     /contact-us
+    defaults: { _controller: ESMainBundle:Main:contact }
+
+is_main_ajax:
+    resource: "@ESMainBundle/Resources/config/routing/ajax.yml"
+    prefix:   /ajax

@@ -1,0 +1,3 @@
+es_country_homepage:
+    path:     /
+    defaults: { _controller: ESCountryBundle:Default:index }
